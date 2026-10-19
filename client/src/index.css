@@ -1,0 +1,406 @@
+@import "tailwindcss";
+
+@theme {
+  --color-art-primary: #101014;
+  --color-art-secondary: #2D81FF;
+  --color-art-accent: #2D81FF;
+  --color-art-tertiary: #E5E7EB;
+  --color-art-neutral: #F2F1EE;
+  --color-art-surface: #FFFFFF;
+  --color-art-on-surface: #101014;
+  --color-art-error: #D64545;
+  --color-art-background: #F2F1EE;
+  --color-art-text: #101014;
+  --color-art-border: #E5E7EB;
+  --color-art-contrast: #F2F1EE;
+
+  --font-display: "Archivo", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+  --font-serif: "Instrument Serif", serif;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Global Base */
+html {
+  background-color: #F2F1EE;
+  color: #101014;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #F2F1EE;
+  color: #101014;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  top: 0px !important;
+  position: static !important;
+}
+
+/* ArtCraft Typography Classes */
+.font-display {
+  font-family: "Archivo", sans-serif;
+}
+
+.font-serif-emphasis {
+  font-family: "Instrument Serif", serif;
+}
+
+.headline-display {
+  font-family: "Archivo", sans-serif;
+  font-weight: 620;
+  font-size: 36px;
+  line-height: 37.8px;
+  letter-spacing: -1.08px;
+}
+
+.headline-lg {
+  font-family: "Inter", sans-serif;
+  font-weight: 620;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0px;
+}
+
+.headline-md {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+
+.headline-sm {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0px;
+}
+
+.body-lg {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 29.25px;
+  letter-spacing: 0px;
+}
+
+.body-md {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 29.25px;
+  letter-spacing: 0px;
+}
+
+.body-sm {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0px;
+}
+
+.label-lg {
+  font-family: "Geist Mono", monospace;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.label-md {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.label-sm {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.overline {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.serif-emphasis {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  letter-spacing: 0px;
+  font-style: italic;
+}
+
+/* ArtCraft Component Classes */
+.btn-art-primary {
+  background-color: #101014;
+  color: #F2F1EE;
+  font-family: "Geist Mono", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 0px;
+  border: 1px solid #101014;
+  min-height: 48px;
+  padding: 14px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.btn-art-primary:hover:not(:disabled) {
+  background-color: #2D81FF;
+  border-color: #2D81FF;
+  color: #FFFFFF;
+}
+
+.btn-art-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-art-secondary {
+  background-color: #F2F1EE;
+  color: #101014;
+  font-family: "Geist Mono", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 0px;
+  border: 1px solid #E5E7EB;
+  min-height: 48px;
+  padding: 14px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.btn-art-secondary:hover:not(:disabled) {
+  background-color: #FFFFFF;
+  border-color: #101014;
+  color: #101014;
+}
+
+.btn-art-secondary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-art-sm {
+  min-height: 36px;
+  padding: 8px 16px;
+}
+
+.art-card {
+  background-color: #FFFFFF;
+  color: #101014;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  padding: 24px;
+  box-shadow: none;
+}
+
+.art-card-sm {
+  background-color: #FFFFFF;
+  color: #101014;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: none;
+}
+
+.art-card-neutral {
+  background-color: #F2F1EE;
+  color: #101014;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  padding: 24px;
+  box-shadow: none;
+}
+
+.art-input {
+  background-color: #FFFFFF;
+  color: #101014;
+  border: 1px solid #E5E7EB;
+  border-radius: 0px;
+  padding: 12px 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.art-input:focus {
+  border-color: #2D81FF;
+}
+
+.art-chip {
+  background-color: #F2F1EE;
+  color: #101014;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  border-radius: 9999px;
+  padding: 6px 12px;
+  border: 1px solid #E5E7EB;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.art-chip-active {
+  background-color: #101014;
+  color: #F2F1EE;
+  border-color: #101014;
+}
+
+.art-badge-blue {
+  background-color: #2D81FF;
+  color: #FFFFFF;
+}
+
+/* Scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #E5E7EB;
+  border-radius: 0px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #101014;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Recharts Tooltips ArtCraft style */
+.recharts-tooltip-cursor {
+  fill: rgba(45, 129, 255, 0.06) !important;
+}
+
+.recharts-default-tooltip {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  border-radius: 4px !important;
+  box-shadow: 0 4px 12px rgba(16, 16, 20, 0.05) !important;
+  color: #101014 !important;
+  font-family: "Geist Mono", monospace !important;
+  font-size: 11px !important;
+}
+
+/* Layout modes */
+body.layout-mode-sidebar {
+  --sidebar-w: 260px;
+}
+
+body.layout-mode-sidebar.sidebar-collapsed {
+  --sidebar-w: 76px;
+}
+
+@media (min-width: 768px) {
+  body.layout-mode-sidebar #root {
+    padding-left: var(--sidebar-w) !important;
+    transition: padding-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  body.layout-mode-sidebar main.max-w-7xl,
+  body.layout-mode-sidebar main {
+    max-width: 100% !important;
+  }
+}
+
+/* Translation Bridge styling: keeps UI 100% clean and native */
+[class*="VIpgJd"],
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc,
+.VIpgJd-ZVi9od-aZ2wEe-OiiCO,
+.VIpgJd-ZVi9od-xl07Ob-lTBxed,
+.VIpgJd-y6vqq-Sw7be3,
+.goog-te-spinner-pos,
+.goog-te-spinner,
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame,
+#google_translate_element,
+.skiptranslate,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+.goog-tooltip,
+.goog-te-gadget,
+body > div[class*="skiptranslate"],
+iframe.skiptranslate,
+iframe[id*=":1.container"],
+iframe[id*=":2.container"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  max-width: 0 !important;
+  max-height: 0 !important;
+  position: absolute !important;
+  left: -99999px !important;
+  top: -99999px !important;
+  z-index: -99999 !important;
+}
+
+.goog-text-highlight {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+font {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.notranslate {
+  translate: no !important;
+}

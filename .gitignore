@@ -1,0 +1,59 @@
+# =========================
+# ENV FILES — IMPORTANT
+# =========================
+.env
+.env.*
+!.env.example
+
+client/.env
+server/.env
+client/.env.*
+server/.env.*
+
+# =========================
+# NODE MODULES
+# =========================
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# =========================
+# BUILD FILES
+# =========================
+dist/
+build/
+client/dist/
+client/build/
+server/dist/
+server/build/
+
+# =========================
+# TEST & COVERAGE
+# =========================
+coverage/
+.nyc_output/
+
+# =========================
+# LOG FILES
+# =========================
+*.log
+logs/
+
+# =========================
+# OS FILES
+# =========================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# =========================
+# IDE FILES
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# TEMP FILES
+# =========================
+tmp/
+temp/

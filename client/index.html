@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillSetu AI • AI-Powered Skill Intelligence & Capacity Building Platform</title>
+
+  <!-- ArtCraft Typography Fonts: Archivo, Inter, Geist Mono, Instrument Serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,620;0,700;1,400;1,600&family=Geist+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,620;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet" />
+
+  <!-- Pre-apply translation cookie from saved preference -->
+  <script>
+    (function () {
+      try {
+        var lang = localStorage.getItem("sankhya_lang");
+        if (lang === "hi") {
+          document.cookie = "googtrans=/en/hi; path=/";
+          document.cookie = "googtrans=/en/hi; path=/; domain=" + window.location.hostname;
+        } else if (lang === "en") {
+          document.cookie = "googtrans=/en/en; path=/";
+          document.cookie = "googtrans=/en/en; path=/; domain=" + window.location.hostname;
+        }
+      } catch (e) { }
+    })();
+  </script>
+
+  <style>
+    /* Completely eradicate any Google Translate floating widget, spinner, logo icon, or banner */
+    [class*="VIpgJd"],
+    .VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+    .VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc,
+    .VIpgJd-ZVi9od-aZ2wEe-OiiCO,
+    .VIpgJd-ZVi9od-xl07Ob-lTBxed,
+    .VIpgJd-y6vqq-Sw7be3,
+    .goog-te-spinner-pos,
+    .goog-te-spinner,
+    .goog-te-balloon-frame,
+    .goog-te-banner-frame,
+    #goog-gt-tt,
+    .goog-tooltip,
+    .goog-te-gadget,
+    #google_translate_element,
+    body > div[class*="skiptranslate"],
+    iframe.skiptranslate,
+    iframe[id*=":1.container"],
+    iframe[id*=":2.container"] {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      width: 0 !important;
+      height: 0 !important;
+      max-width: 0 !important;
+      max-height: 0 !important;
+      position: absolute !important;
+      left: -99999px !important;
+      top: -99999px !important;
+      z-index: -99999 !important;
+    }
+
+    body {
+      top: 0px !important;
+      position: static !important;
+    }
+
+    .goog-text-highlight {
+      background: transparent !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+
+    font {
+      background-color: transparent !important;
+      box-shadow: none !important;
+    }
+  </style>
+
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- Deep Omnipresent Translation Bridge for English & Hindi across all pages and letters -->
+  <div id="google_translate_element" style="display:none"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      if (window.google && window.google.translate) {
+        new window.google.translate.TranslateElement({
+          pageLanguage: 'en',
+          includedLanguages: 'en,hi',
+          autoDisplay: false
+        }, 'google_translate_element');
+      }
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
